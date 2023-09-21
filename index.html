@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Challenge Generator</title>
+  <script>
+    var titles = ["Wildlife Photography", 
+    "Pit Stop",
+    "Art Attack",
+    "Too thirsty",
+    "New Perspective",
+    "Bogeys",
+    "Shredded",
+    "Feeling cultured",
+    "Wee bit peckish",
+    "I'm running out of challenge ideas"]
+    var descriptions = ["Take a photo of a living, not human, animal",
+    "All team members have an alcoholic beverage",
+    "Draw, paint or somehow create some art",
+    "Drink a can of juice without using the ring pull",
+    "All team members stand on something tall i.e. fence, postbox, bench for 2 minutes",
+    "All team members scream Bogeys as loud as they can",
+    "All team members do 40 push ups",
+    "Recite a 30 second poem out loud (Selkirks grace if stuck)",
+    "Throw 5 sweets high into the air and catch them in your mouth (or to a team mate's mouth 2 meters away)",
+    "Hop on one leg 10 times (Feel free to pick another challenge)"] 
+    
+    function get(){
+    	var i = Math.floor(Math.random() * 10);
+      document.getElementById("title").innerHTML= titles[i]
+      document.getElementById("description").innerHTML= descriptions[i]
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Challenge Generator</h1>
+  <p>Each success grants 3 points. </p>
+  <p>1 point per mile travelled.</p>
+  
+  <button type="button" onclick="get()"> Get Challenge</button>
+  
+  <h3 id="title"></h3>
+  <p id="description"></p>
+</body>
+</html>
